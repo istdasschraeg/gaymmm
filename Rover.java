@@ -4,11 +4,21 @@ public class Rover extends Actor
 {
     private Display anzeige;
 
-    public void act() 
+    public void Bohrer() 
+
     {
 
     } 
+    public void setzeBohrer()
+    {   
+        if(getOneIntersectingObject(Gestein.class)!=null)
+        {
+            getWorld().addObject(new Bohrer(), getX(), getY());
+            
 
+        }
+    }
+    
 
     /**
      * Der Rover bewegt sich ein Feld in Fahrtrichtung weiter.
@@ -41,8 +51,8 @@ public class Rover extends Actor
     }
 
     /**
-     * Der Rover dreht sich um 90 Grad in die Richtung, die mit richtung („links“ oder „rechts“) übergeben wurde.
-     * Sollte ein anderer Text (String) als "rechts" oder "links" übergeben werden, dann erscheint eine entsprechende Meldung auf dem Display.
+     * Der Rover dreht sich um 90 Grad in die Richtung, die mit richtung (â€žlinksâ€œ oder â€žrechtsâ€œ) Ã¼bergeben wurde.
+     * Sollte ein anderer Text (String) als "rechts" oder "links" Ã¼bergeben werden, dann erscheint eine entsprechende Meldung auf dem Display.
      */
     public void drehe(String richtung)
     {
@@ -61,7 +71,7 @@ public class Rover extends Actor
     }
 
     /**
-     * Der Rover gibt durch einen Wahrheitswert (true oder false )zurück, ob sich auf seiner Position ein Objekt der Klasse Gestein befindet.
+     * Der Rover gibt durch einen Wahrheitswert (true oder false )zurÃ¼ck, ob sich auf seiner Position ein Objekt der Klasse Gestein befindet.
      * Eine entsprechende Meldung erscheint auch auf dem Display.
      */
     public boolean gesteinVorhanden()
@@ -77,9 +87,9 @@ public class Rover extends Actor
     }
 
     /**
-     * Der Rover überprüft, ob sich in richtung ("rechts", "links", oder "vorne") ein Objekt der Klasse Huegel befindet.
+     * Der Rover Ã¼berprÃ¼ft, ob sich in richtung ("rechts", "links", oder "vorne") ein Objekt der Klasse Huegel befindet.
      * Das Ergebnis wird auf dem Display angezeigt.
-     * Sollte ein anderer Text (String) als "rechts", "links" oder "vorne" übergeben werden, dann erscheint eine entsprechende Meldung auf dem Display.
+     * Sollte ein anderer Text (String) als "rechts", "links" oder "vorne" Ã¼bergeben werden, dann erscheint eine entsprechende Meldung auf dem Display.
      */
     public boolean huegelVorhanden(String richtung)
     {
@@ -127,26 +137,10 @@ public class Rover extends Actor
         return false;
     }
 
-    /**
-     * Der Rover ermittelt den Wassergehalt des Gesteins auf seiner Position und gibt diesen auf dem Display aus.
-     * Sollte kein Objekt der Klasse Gestein vorhanden sein, dann erscheint eine entsprechende Meldung auf dem Display.
-     */
-    public void analysiereGestein()
-    {
-        if(gesteinVorhanden())
-        {
-            nachricht("Gestein untersucht! Wassergehalt ist " + ((Gestein)getOneIntersectingObject(Gestein.class)).getWassergehalt()+"%.");
-            Greenfoot.delay(1);
-            removeTouching(Gestein.class);
-        }
-        else 
-        {
-            nachricht("Hier ist kein Gestein");
-        }
-    }
+    
 
     /**
-     * Der Rover erzeugt ein Objekt der Klasse „Markierung“ auf seiner Position.
+     * Der Rover erzeugt ein Objekt der Klasse â€žMarkierungâ€œ auf seiner Position.
      */
     public void setzeMarke()
     {
@@ -154,7 +148,7 @@ public class Rover extends Actor
     }
 
     /**
-     * *Der Rover gibt durch einen Wahrheitswert (true oder false )zurück, ob sich auf seiner Position ein Objekt der Marke befindet.
+     * *Der Rover gibt durch einen Wahrheitswert (true oder false )zurÃ¼ck, ob sich auf seiner Position ein Objekt der Marke befindet.
      * Eine entsprechende Meldung erscheint auch auf dem Display.
      */
     public boolean markeVorhanden()
