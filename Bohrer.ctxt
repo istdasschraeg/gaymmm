@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Bohrer
+comment1.params=
+comment1.target=void\ activate()
+comment2.params=
+comment2.target=void\ ShowEisen()
+comment3.params=
+comment3.target=boolean\ gesteinVorhanden()
+comment3.text=\r\n\ Der\ Bohrer\ gibt\ durch\ einen\ Wahrheitswert\ (true\ oder\ false\ )zur\u00FCck,\ ob\ sich\ auf\ seiner\ Position\ ein\ Objekt\ der\ Klasse\ Gestein\ befindet.\r\n\ Eine\ entsprechende\ Meldung\ erscheint\ auch\ auf\ dem\ Display.\r\n
+comment4.params=
+comment4.target=void\ analysiereGestein()
+comment4.text=\r\n\ Der\ Bohrer\ ermittelt\ den\ Wassergehalt\ des\ Gesteins\ auf\ seiner\ Position\ und\ gibt\ diesen\ auf\ dem\ Display\ aus.\r\n\ Sollte\ kein\ Objekt\ der\ Klasse\ Gestein\ vorhanden\ sein,\ dann\ erscheint\ eine\ entsprechende\ Meldung\ auf\ dem\ Display.\r\n
+comment5.params=pText
+comment5.target=void\ nachricht(java.lang.String)
+comment6.params=
+comment6.target=void\ displayAusschalten()
+comment7.params=world
+comment7.target=void\ addedToWorld(greenfoot.World)
+numComments=8

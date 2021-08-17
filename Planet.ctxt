@@ -1,5 +1,7 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Planet()
-comment0.text=\n\ Erschaffe\ eine\ Welt\ mit\ 15\ *\ 12\ Zellen.\n
-numComments=1
+comment0.target=Planet
+comment0.text=\r\n\ Die\ einzigen\ aktiven\ Akteure\ in\ der\ Roboterwelt\ sind\ die\ Roboter.\r\n\ Die\ Welt\ besteht\ aus\ 14\ *\ 10\ Feldern.\r\n
+comment1.params=
+comment1.target=Planet()
+comment1.text=\r\n\ Erschaffe\ eine\ Welt\ mit\ 15\ *\ 12\ Zellen.\r\n
+numComments=2
