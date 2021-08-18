@@ -5,24 +5,23 @@ public class Bohrer extends Actor
     private Display anzeige;
     private int Eisen;
     private int X;
-    
+
     public void activate()
     {
         if(gesteinVorhanden()){
-        X = ((Gestein)getOneIntersectingObject(Gestein.class)).getWassergehalt();
-        Greenfoot.delay(10);
-        nachricht("Gestein untersucht!  Du erhälst " + X +"Eisen");
-        Eisen += X;
-        removeTouching(Gestein.class);
-        nachricht("Du hast "  + Eisen + " Eisen");
+            X = ((Gestein)getOneIntersectingObject(Gestein.class)).getWassergehalt();
+            Greenfoot.delay(10);
+            nachricht("Gestein untersucht!  Du erhälst " + X +"Eisen");
+            Eisen += X;
+            removeTouching(Gestein.class);
+            nachricht("Du hast "  + Eisen + " Eisen");
+        }
     }
-    }
-   
+
     public void ShowEisen()
     {
         nachricht("Du hast " + Eisen + " Eisen");
     }
-    
 
     /**
      * Der Bohrer gibt durch einen Wahrheitswert (true oder false )zurück, ob sich auf seiner Position ein Objekt der Klasse Gestein befindet.
@@ -40,7 +39,6 @@ public class Bohrer extends Actor
         return false;
     }
 
-    
 
     /**
      * Der Bohrer ermittelt den Wassergehalt des Gesteins auf seiner Position und gibt diesen auf dem Display aus.
@@ -60,7 +58,6 @@ public class Bohrer extends Actor
         }
     }
 
-    
     private void nachricht(String pText)
     {
         if(anzeige!=null)

@@ -9,16 +9,15 @@ public class Rover extends Actor
     {
 
     } 
+
     public void setzeBohrer()
     {   
         if(getOneIntersectingObject(Gestein.class)!=null)
         {
             getWorld().addObject(new Bohrer(), getX(), getY());
-            
 
         }
     }
-    
 
     /**
      * Der Rover bewegt sich ein Feld in Fahrtrichtung weiter.
@@ -137,7 +136,6 @@ public class Rover extends Actor
         return false;
     }
 
-    
 
     /**
      * Der Rover erzeugt ein Objekt der Klasse „Markierung“ auf seiner Position.
